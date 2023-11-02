@@ -12,4 +12,7 @@ export class AppComponent {
   menuAction() {
     this.menuOpen = !this.menuOpen;
   }
+  closeMenu() {
+    this.menuOpen = false;
+  }
 }
