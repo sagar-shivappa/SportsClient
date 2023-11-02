@@ -1,0 +1,15 @@
+<div class="side-menu">
+  <nav>
+    <ul>
+      <li
+        class="menu-items"
+        *ngFor="let a of menu"
+        [routerLink]="a.link"
+        (click)="menuSelection()"
+      >
+        {{ a.activity }}
+      </li>
+      <hr />
+    </ul>
+  </nav>
+</div>

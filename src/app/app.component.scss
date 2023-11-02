@@ -1,0 +1,14 @@
+.header {
+  background-color: cadetblue;
+  padding: 5px;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  max-height: 50px;
+}
+.menu-icon {
+  float: left;
+  padding: 3%;
+  width: 20px;
+}
