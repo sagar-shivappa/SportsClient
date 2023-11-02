@@ -5,18 +5,18 @@
   height: 100%;
   width: 100%;
   justify-content: space-between;
+  letter-spacing: 5px;
   max-height: 50px;
+  align-items: center;
 }
 .menu-icon {
   float: left;
   padding: 3%;
   width: 20px;
 }
-.logo {
-  width: 40px;
-  height: 100%;
-}
+
 .title {
-  font-weight: 400;
+  font-weight: 700;
   color: white;
+  text-align: center;
 }
