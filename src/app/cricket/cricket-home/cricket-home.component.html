@@ -1,4 +1,10 @@
 <div class="container">
-  <h2>Cricket Registeration</h2>
-  <h4>Coming Soon...</h4>
+  <h3>Cricket Rules 2023</h3>
+  <ol>
+    <li *ngFor="let rule of rules">
+      {{ rule }}
+      <br />
+    </li>
+  </ol>
+  <button class="btn btn-primary" routerLink="/register">Register</button>
 </div>
