@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="card-block">
+    <div class="card" *ngFor="let item of menuItems">
+      <img [src]="item.logo" class="image" (click)="handleFeature(item.link)" />
+      <p>{{ item.activity | uppercase }}</p>
+    </div>
+  </div>
+</div>
