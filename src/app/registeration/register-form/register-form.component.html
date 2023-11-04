@@ -1,1 +1,149 @@
-<h2>Registeration Form will be coming Soon!!!</h2>
+<div class="container">
+  <span><b>Notice:</b></span>
+  <p class="message">
+    1. Sports Registeration and Cricket can be done with the same form below.
+    <br />
+    2. Registration Fee <br />
+    Rs. 100 + Rs.100(Cricket Players optional)
+  </p>
+  <hr />
+  <form action="submit" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="fullName">Full Name</label>
+      <input
+        type="text"
+        id="fullName"
+        placeholder="Enter you Full Name"
+        class="form-control"
+        name="fullName"
+        formControlName="fullName"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="age">Age</label>
+      <input
+        type="number"
+        id="age"
+        placeholder="Enter you age"
+        class="form-control"
+        name="age"
+        formControlName="age"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="contactNumber">Contact Number</label>
+      <input
+        type="number"
+        id="contactNumber"
+        placeholder="Enter you Contact Number "
+        class="form-control"
+        name="contactNumber"
+        formControlName="contactNumber"
+      />
+    </div>
+    <label for="genderSelect">Gender</label>
+    <div id="genderSelect" class="radio-selection">
+      <div>
+        <label class="" for="flexCheckDefault">Male </label>
+        <input
+          class="radio-in"
+          type="radio"
+          value="Male"
+          formControlName="gender"
+          id="flexCheckDefault"
+          name="gender"
+        />
+      </div>
+      <div>
+        <label class="" for="flexCheckChecked">Female </label>
+        <input
+          class="radio-in"
+          type="radio"
+          value="Female"
+          formControlName="gender"
+          id="flexCheckChecked"
+          name="gender"
+        />
+      </div>
+    </div>
+    <hr />
+
+    <label for="cricket">You want to be in Cricket Team?</label>
+    <div id="cricket" class="radio-selection">
+      <div>
+        <label class="" for="flexCheckDefault">Yes</label>
+        <input
+          class="radio-in"
+          type="radio"
+          value="Yes"
+          formControlName="cricket"
+          id="flexCheckDefault"
+          name="cricket"
+        />
+      </div>
+      <div>
+        <label class="" for="flexCheckChecked">No</label>
+        <input
+          class="radio-in"
+          type="radio"
+          value="No"
+          formControlName="cricket"
+          id="flexCheckChecked"
+          name="cricket"
+        />
+      </div>
+    </div>
+    <hr />
+    <ng-container *ngIf="registrationForm.get('cricket')?.value == 'Yes'">
+      <label for="cricketType">What do you consider yourself as?</label>
+      <div id="cricketType" class="radio-selection">
+        <div>
+          <label class="" for="cricketType">Batsman </label>
+          <input
+            class="radio-in"
+            type="radio"
+            value="batsman"
+            formControlName="cricketPlayerType"
+            id="cricketType"
+            name="cricketPlayerType"
+          />
+        </div>
+        <div>
+          <label class="" for="cricketType">Bowler </label>
+          <input
+            class="radio-in"
+            type="radio"
+            value="Bowler"
+            formControlName="cricketPlayerType"
+            id="cricketType"
+            name="cricketPlayerType"
+          />
+        </div>
+        <div>
+          <label class="" for="cricketType">All-Rounder </label>
+          <input
+            class="radio-in"
+            type="radio"
+            value="AllRounder"
+            formControlName="cricketPlayerType"
+            id="cricketType"
+            name="cricketPlayerType"
+          />
+        </div>
+      </div>
+    </ng-container>
+    <hr />
+    <div class="buttons">
+      <button
+        class="btn btn-success"
+        type="submit"
+        [disabled]="!registrationForm.valid"
+      >
+        Submit
+      </button>
+      <button class="btn btn-info" type="reset">Reset</button>
+    </div>
+  </form>
+</div>
