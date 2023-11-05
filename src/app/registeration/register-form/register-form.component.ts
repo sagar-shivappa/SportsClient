@@ -17,11 +17,14 @@ export class RegisterFormComponent implements OnInit {
   constructor(private fb: FormBuilder) {
     this.registrationForm = this.fb.group({
       fullName: new FormControl('', [Validators.required]),
-      age: new FormControl('', [Validators.required]),
+      age: new FormControl('', [
+        Validators.required,
+        Validators.pattern('[123456789][0-9]?'),
+      ]),
       gender: new FormControl('', [Validators.required]),
       contactNumber: new FormControl('', [
         Validators.required,
-        Validators.pattern('[789][0-9]{9}'),
+        Validators.pattern('[7896][0-9]{9}'),
       ]),
       cricket: new FormControl('', [Validators.required]),
       cricketPlayerType: new FormControl(''),
@@ -32,5 +35,11 @@ export class RegisterFormComponent implements OnInit {
 
   onSubmit() {
     console.log('submit', this.registrationForm.value);
+  }
+  get getcontactNumber() {
+    return this.registrationForm.get('contactNumber');
+  }
+  get getAge() {
+    return this.registrationForm.get('age');
   }
 }

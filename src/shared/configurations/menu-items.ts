@@ -24,4 +24,14 @@ export const menu = [
     link: '/admin',
     logo: '../../assets/admin.png',
   },
+  // {
+  //   activity: 'Sponsors',
+  //   link: '/admin',
+  //   logo: '../../assets/sponsors.png',
+  // },
+  {
+    activity: 'About Us',
+    link: '/admin',
+    logo: '../../assets/about_us.png',
+  },
 ];

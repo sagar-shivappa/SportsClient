@@ -30,6 +30,19 @@
         name="age"
         formControlName="age"
       />
+      <div
+        class="field-error"
+        *ngIf="
+          registrationForm.get('age')?.invalid &&
+          (registrationForm.get('age')?.dirty ||
+            registrationForm.get('age')?.touched)
+        "
+      >
+        <div *ngIf="getAge?.errors?.['required']">Age is required field</div>
+        <div *ngIf="getAge?.errors?.['pattern']">
+          Player age should be above 5 years and below 100 years
+        </div>
+      </div>
     </div>
 
     <div class="form-group">
@@ -42,6 +55,21 @@
         name="contactNumber"
         formControlName="contactNumber"
       />
+      <div
+        class="field-error"
+        *ngIf="
+          registrationForm.get('contactNumber')?.invalid &&
+          (registrationForm.get('contactNumber')?.dirty ||
+            registrationForm.get('contactNumber')?.touched)
+        "
+      >
+        <div *ngIf="getcontactNumber?.errors?.['pattern']">
+          Enter a Valid Contact Number
+        </div>
+        <div *ngIf="getcontactNumber?.errors?.['required']">
+          Contact Number should be 10 digits
+        </div>
+      </div>
     </div>
     <label for="genderSelect">Gender</label>
     <div id="genderSelect" class="radio-selection">
@@ -69,6 +97,9 @@
       </div>
     </div>
     <hr />
+    <p class="message">
+      <a routerLink="/cricket">Click here for Cricket Rules</a>
+    </p>
 
     <label for="cricket">You want to be in Cricket Team?</label>
     <div id="cricket" class="radio-selection">

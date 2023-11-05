@@ -32,6 +32,16 @@ const routes: Routes = [
       import('./category/category.module').then((m) => m.CategoryModule),
   },
   {
+    path: 'sponsors',
+    loadChildren: () =>
+      import('./sponsors/sponsors.module').then((m) => m.SponsorsModule),
+  },
+  {
+    path: 'about-us',
+    loadChildren: () =>
+      import('./about-us/about-us.module').then((m) => m.AboutUsModule),
+  },
+  {
     path: '**',
     redirectTo: '',
   },
