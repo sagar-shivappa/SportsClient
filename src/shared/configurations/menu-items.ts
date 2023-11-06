@@ -1,6 +1,6 @@
 export const menu = [
   {
-    activity: 'Registeration',
+    activity: 'Register',
     link: '/register',
     logo: '../../assets/registration_logo.png',
   },

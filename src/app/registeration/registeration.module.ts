@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterationRoutingModule } from './registeration-routing.module';
 import { RegisterFormComponent } from './register-form/register-form.component';
+import { GooglePayButtonModule } from '@google-pay/button-angular';
 
 @NgModule({
   declarations: [RegisterFormComponent],
@@ -11,6 +12,7 @@ import { RegisterFormComponent } from './register-form/register-form.component';
     RegisterationRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    GooglePayButtonModule,
   ],
 })
 export class RegisterationModule {}

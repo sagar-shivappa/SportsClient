@@ -166,6 +166,14 @@
       </div>
     </ng-container>
     <hr />
+    <google-pay-button
+      environment="TEST"
+      buttonSizeMode="fill"
+      [paymentRequest]="paymentRequest"
+      (loadpaymentdata)="onLoadpaymentData($event)"
+      [paymentAuthorizedCallback]="onPaymentDataAuth"
+      (error)="onError($event)"
+    ></google-pay-button>
     <div class="buttons">
       <button
         class="btn btn-success"
