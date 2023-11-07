@@ -1,15 +1,16 @@
-<div class="container">
+<div class="container" *ngIf="!showConfirmation">
   <span><b>Notice:</b></span>
   <p class="message">
     1. Sports Registeration and Cricket can be done with the same form below.
     <br />
     2. Registration Fee <br />
-    Rs.100 + Rs.100 (Only for Cricket Players)
+    For Adults: Rs.100 + Rs.100 ( Only for Cricket Players ) <br />
+    For Kids ( Below 13 years ) : Rs. 50
   </p>
   <hr />
   <form action="submit" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label for="fullName">Full Name</label>
+      <label for="fullName">Full Name</label> <span class="required">*</span>
       <input
         type="text"
         id="fullName"
@@ -21,7 +22,7 @@
     </div>
 
     <div class="form-group">
-      <label for="age">Age</label>
+      <label for="age">Age</label><span class="required">*</span>
       <input
         type="number"
         id="age"
@@ -46,7 +47,8 @@
     </div>
 
     <div class="form-group">
-      <label for="contactNumber">Contact Number</label>
+      <label for="contactNumber">Contact Number</label
+      ><span class="required">*</span>
       <input
         type="number"
         id="contactNumber"
@@ -71,7 +73,7 @@
         </div>
       </div>
     </div>
-    <label for="genderSelect">Gender</label>
+    <label for="genderSelect">Gender</label><span class="required">*</span>
     <div id="genderSelect" class="radio-selection">
       <div>
         <label class="" for="flexCheckDefault">Male </label>
@@ -97,38 +99,44 @@
       </div>
     </div>
     <hr />
-    <p class="message">
-      <a routerLink="/cricket">Click here for Cricket Rules</a>
-    </p>
 
-    <label for="cricket">You want to be in Cricket Team?</label>
-    <div id="cricket" class="radio-selection">
-      <div>
-        <label class="" for="flexCheckDefault">Yes</label>
-        <input
-          class="radio-in"
-          type="radio"
-          value="Yes"
-          formControlName="cricket"
-          id="flexCheckDefault"
-          name="cricket"
-        />
+    <ng-container *ngIf="registrationForm.get('age')?.value > 12">
+      <p class="message">
+        <a routerLink="/cricket">Click here for Cricket Rules</a>
+      </p>
+      <label for="cricket">You want to be in Cricket Team?</label
+      ><span class="required">*</span>
+      <p>ಕ್ರಿಕೆಟ್ ಟೀಮ್ನಲ್ಲಿ ಆಡಲು ಇಸ್ಟವೆ ?</p>
+      <div id="cricket" class="radio-selection">
+        <div>
+          <label class="" for="flexCheckDefault">Yes</label>
+          <input
+            class="radio-in"
+            type="radio"
+            value="Yes"
+            formControlName="cricket"
+            id="flexCheckDefault"
+            name="cricket"
+          />
+        </div>
+        <div>
+          <label class="" for="flexCheckChecked">No</label>
+          <input
+            class="radio-in"
+            type="radio"
+            value="No"
+            formControlName="cricket"
+            id="flexCheckChecked"
+            name="cricket"
+          />
+        </div>
       </div>
-      <div>
-        <label class="" for="flexCheckChecked">No</label>
-        <input
-          class="radio-in"
-          type="radio"
-          value="No"
-          formControlName="cricket"
-          id="flexCheckChecked"
-          name="cricket"
-        />
-      </div>
-    </div>
-    <hr />
+      <hr />
+    </ng-container>
+
     <ng-container *ngIf="registrationForm.get('cricket')?.value == 'Yes'">
-      <label for="cricketType">What do you consider yourself as?</label>
+      <label for="cricketType">What do you consider yourself as?</label
+      ><span class="required">*</span>
       <div id="cricketType" class="radio-selection">
         <div>
           <label class="" for="cricketType">Batsman </label>
@@ -164,16 +172,82 @@
           />
         </div>
       </div>
+      <hr />
     </ng-container>
-    <hr />
-    <google-pay-button
+    <ng-container>
+      <label for="payment">Will you complete Payment Online?</label>
+      <div id="payment" class="radio-selection">
+        <div>
+          <label class="" for="paymentType">Online Payment </label>
+          <input
+            class="radio-in"
+            type="radio"
+            value="online"
+            formControlName="paymentType"
+            id="paymentType"
+            name="paymentType"
+          />
+        </div>
+        <div>
+          <label class="" for="paymentType">Offline Payment </label>
+          <input
+            class="radio-in"
+            type="radio"
+            value="offline"
+            formControlName="paymentType"
+            id="paymentType"
+            name="paymentType"
+          />
+        </div>
+      </div>
+      <hr />
+    </ng-container>
+    <ng-container
+      *ngIf="registrationForm.get('paymentType')?.value == 'online'"
+    >
+      <div class="paymentMenthods">
+        <img src="../../../assets/phonepe.webp" class="logo" alt="" />
+        <img src="../../../assets/gpay.png" class="logo" alt="" />
+        <span class="paymentNumber" id="paymentNumber">+91 6360959764</span>
+        <!-- <img src="../../../assets/copy_126498.png" class="logo_copy" alt="" /> -->
+      </div>
+      <label for="paymentStaus">Did you complete payment?</label>
+      <div id="paymentStaus" class="radio-selection">
+        <div>
+          <label class="" for="paymentStatus">Yes</label>
+          <input
+            class="radio-in"
+            type="radio"
+            value="Yes"
+            formControlName="paymentStatus"
+            id="paymentStatus"
+            name="paymentStatus"
+          />
+        </div>
+        <div>
+          <label class="" for="paymentStatus">NO</label>
+          <input
+            class="radio-in"
+            type="radio"
+            value="No"
+            formControlName="paymentStatus"
+            id="paymentStatus"
+            name="paymentStatus"
+          />
+        </div>
+      </div>
+      <hr />
+    </ng-container>
+
+    <!-- <google-pay-button
       environment="TEST"
       buttonSizeMode="fill"
       [paymentRequest]="paymentRequest"
       (loadpaymentdata)="onLoadpaymentData($event)"
       [paymentAuthorizedCallback]="onPaymentDataAuth"
       (error)="onError($event)"
-    ></google-pay-button>
+    ></google-pay-button> -->
+
     <div class="buttons">
       <button
         class="btn btn-success"
@@ -186,3 +260,7 @@
     </div>
   </form>
 </div>
+<app-register-confirm
+  *ngIf="showConfirmation"
+  [confirmation]="confirmationInfo"
+></app-register-confirm>

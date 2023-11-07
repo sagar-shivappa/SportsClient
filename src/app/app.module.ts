@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SideMenuComponent } from './side-menu/side-menu.component';
@@ -9,7 +9,7 @@ import { SharedModule } from './shared-module/shared.module';
 
 @NgModule({
   declarations: [AppComponent, SideMenuComponent, HomeComponent],
-  imports: [BrowserModule, AppRoutingModule, SharedModule],
+  imports: [BrowserModule, AppRoutingModule, SharedModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
