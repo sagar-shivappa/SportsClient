@@ -1,4 +1,4 @@
-<div class="container" *ngIf="!showConfirmation">
+<!-- <div class="container" *ngIf="!showConfirmation">
   <span><b>Notice:</b></span>
   <p class="message">
     1. Sports Registeration and Cricket can be done with the same form below.
@@ -209,7 +209,6 @@
         <img src="../../../assets/phonepe.webp" class="logo" alt="" />
         <img src="../../../assets/gpay.png" class="logo" alt="" />
         <span class="paymentNumber" id="paymentNumber">+91 6360959764</span>
-        <!-- <img src="../../../assets/copy_126498.png" class="logo_copy" alt="" /> -->
       </div>
       <label for="paymentStaus">Did you complete payment?</label>
       <div id="paymentStaus" class="radio-selection">
@@ -239,15 +238,6 @@
       <hr />
     </ng-container>
 
-    <!-- <google-pay-button
-      environment="TEST"
-      buttonSizeMode="fill"
-      [paymentRequest]="paymentRequest"
-      (loadpaymentdata)="onLoadpaymentData($event)"
-      [paymentAuthorizedCallback]="onPaymentDataAuth"
-      (error)="onError($event)"
-    ></google-pay-button> -->
-
     <div class="buttons">
       <button
         class="btn btn-success"
@@ -263,4 +253,11 @@
 <app-register-confirm
   *ngIf="showConfirmation"
   [confirmation]="confirmationInfo"
-></app-register-confirm>
+></app-register-confirm> -->
+<div class="container">
+  <h2>
+    For Registration
+    <a href="https://forms.gle/k9LPrgmpP6efs1PP6" target="_blank">Click here</a>
+    <h6 class="message">Note: This link will take you outside our website.</h6>
+  </h2>
+</div>

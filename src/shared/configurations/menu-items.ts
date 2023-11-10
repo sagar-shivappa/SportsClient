@@ -31,7 +31,7 @@ export const menu = [
   // },
   {
     activity: 'About Us',
-    link: '/admin',
+    link: '/about-us',
     logo: '../../assets/about_us.png',
   },
 ];
