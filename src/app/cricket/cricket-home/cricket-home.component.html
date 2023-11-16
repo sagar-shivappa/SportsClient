@@ -1,10 +1,20 @@
 <div class="container">
-  <h3>Cricket Rules 2023</h3>
+  <div class="cricket_head">
+    <h3>Cricket Rules 2023</h3>
+    <i class="fa-solid fa-calendar-days message">
+      <strong>23</strong> <sup>rd</sup> December</i
+    >
+  </div>
+
   <ol>
     <li *ngFor="let rule of rules">
       {{ rule }}
       <br />
     </li>
   </ol>
+
+  <hr />
   <button class="btn btn-primary" routerLink="/register">Register</button>
+  <hr />
+  <h4>Cricket Groups and Teams will be announced here shortly..</h4>
 </div>

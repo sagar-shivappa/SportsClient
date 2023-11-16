@@ -1,13 +1,11 @@
 <div class="header">
   <div class="menu-icon">
     <i
-      [ngClass]="
-        menuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-ellipsis-vertical'
-      "
+      [ngClass]="menuOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"
       (click)="menuAction()"
     ></i>
   </div>
-  <span class="title">DEVANGA</span>
+  <span class="title">MYSURU DEVANGA</span>
   <img
     src="../assets/logo1.png"
     (click)="closeMenu()"

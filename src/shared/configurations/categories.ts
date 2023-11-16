@@ -26,7 +26,7 @@ export const categories = [
   },
   {
     category: 'SENIORS',
-    age: '66 years onwards',
+    age: '65 years onwards',
     code: 'SN',
   },
 ];
