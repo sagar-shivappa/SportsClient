@@ -1,32 +1,32 @@
 export const categories = [
   {
     category: 'KIDS',
-    age: '5-9 years',
+    age: '5-8 years',
     code: 'KID',
   },
   {
+    category: 'CHILDREN',
+    age: '9-12 years',
+    code: 'CHD',
+  },
+  {
     category: 'TEENS',
-    age: '10-14 years',
+    age: '13-19 years',
     code: 'TE',
   },
   {
     category: 'YOUNGSTERS',
-    age: '15-19 years',
+    age: '20-35 years',
     code: 'YM /YF',
   },
   {
     category: 'WARRIORS',
-    age: '20-35 years',
+    age: '36-59 years',
     code: 'WM /WF',
   },
   {
     category: 'LEGENDS',
-    age: '36-65 years',
+    age: '60 years +',
     code: 'LM /LF',
-  },
-  {
-    category: 'SENIORS',
-    age: '65 years onwards',
-    code: 'SN',
   },
 ];
