@@ -12,7 +12,7 @@ export const categories = [
   {
     category: 'TEENS',
     age: '13-19 years',
-    code: 'TE',
+    code: 'TM /TF',
   },
   {
     category: 'YOUNGSTERS',
