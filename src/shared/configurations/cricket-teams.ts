@@ -117,7 +117,7 @@ export const teams = [
     ],
   },
   {
-    teamName: 'Nuway Night Riders ',
+    teamName: 'Nuway Knight Riders ',
     franchiseOwner: 'NU-WAY Logistics',
     captain: 'Manohar',
     players: [
