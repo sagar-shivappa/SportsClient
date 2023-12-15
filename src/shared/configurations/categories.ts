@@ -27,6 +27,6 @@ export const categories = [
   {
     category: 'LEGENDS',
     age: '60 years +',
-    code: 'LM /LF',
+    code: 'LGD',
   },
 ];
