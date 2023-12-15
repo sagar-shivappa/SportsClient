@@ -13,8 +13,32 @@
     </li>
   </ol>
 
+  <!-- <hr />
+  <button class="btn btn-primary" routerLink="/register">Register</button> -->
   <hr />
-  <button class="btn btn-primary" routerLink="/register">Register</button>
-  <hr />
-  <h4>Cricket Groups and Teams will be announced here shortly..</h4>
+  <h3 style="text-align: center">DPL - <b>2023</b></h3>
+  <div class="cric-flex">
+    <div *ngFor="let team of cricketTeams">
+      <div class="cricket-container">
+        Team Name: <strong>{{ team.teamName }}</strong> <br />
+        Franchise Owner : <strong>{{ team.franchiseOwner }}</strong> <br />
+        Captain : {{ team.captain | uppercase }}
+        <!-- <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <td>Player</td>
+              <td>Age</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let player of team.players">
+              <td>{{ player.name }}</td>
+              <td>{{ player.age }}</td>
+            </tr>
+          </tbody>
+        </table> -->
+        <hr />
+      </div>
+    </div>
+  </div>
 </div>

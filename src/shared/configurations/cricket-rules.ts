@@ -4,6 +4,7 @@ export const cricketRules = [
   'Each side will get 6 overs to play',
   'Overs follow, single player can bowl 2 OVERS maximum',
   'Ground size will be 40 yards[Short Boundary], hitting outside the boundary will be considered as OUT',
+  '1st over of each Innings will be a power play, where hitting sixes will be considered',
   'Minimum one girl player will be included in each Team (Based on Registrations)',
   'Dress Code: Jersey type shirt and track pants, compulsory to wear sports shoes',
   'Bowling action should be one step',
