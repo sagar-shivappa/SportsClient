@@ -5,10 +5,12 @@ export const cricketRules = [
   'Overs follow, single player can bowl 2 OVERS maximum',
   'Ground size will be 40 yards[Short Boundary], hitting outside the boundary will be considered as OUT',
   '1st over of each Innings will be a power play, where hitting sixes will be considered',
-  'Minimum one girl player will be included in each Team (Based on Registrations)',
+  'Minimum one girl player will be included in each Team (Based on Registrations) and one over should be given on mandatory basis',
   'Dress Code: Jersey type shirt and track pants, compulsory to wear sports shoes',
   'Bowling action should be one step',
-  'If Team players are not available at the match time, that particular match would be considered as walk-over',
+  'On No Ball, the batting team will get a Free Hit chance. Hitting sixes will be allowed for that particalar ball',
+  'If Team players are not available at the match time, the team should continue to play with the remaining players',
+
   'Umpire descisions will be FINAL',
   'Any Mis-behaviour or unethical activity observed, the person or the entire team will be DIS-QUALIFIED from the tournament ',
 ];
