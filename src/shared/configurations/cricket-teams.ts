@@ -41,7 +41,7 @@ export const teams = [
   {
     teamName: 'Kadaiah Kings',
     franchiseOwner: 'L kadaiah silks',
-    captain: 'Prathap',
+    captain: 'Pratap Simha',
     players: [
       {
         name: '1',
