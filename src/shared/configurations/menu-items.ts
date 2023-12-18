@@ -19,11 +19,11 @@ export const menu = [
     link: '/cricket',
     logo: '../../assets/cricket_logo.png',
   },
-  {
-    activity: 'Admin Login',
-    link: '/admin',
-    logo: '../../assets/admin.png',
-  },
+  // {
+  //   activity: 'Admin Login',
+  //   link: '/admin',
+  //   logo: '../../assets/admin.png',
+  // },
   // {
   //   activity: 'Sponsors',
   //   link: '/admin',

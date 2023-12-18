@@ -1,11 +1,33 @@
 <div class="container">
-  <h2>Are you Ready?</h2>
-  <h4>
-    Keep waiting, and stay tuned.... <br />
+  <div class="gameHead">
+    <h2>Are you Ready?</h2>
+    <i class="fa-solid fa-calendar-days message">
+      <strong>24</strong> <sup>th</sup> December</i
+    >
+  </div>
+
+  <ng-container *ngFor="let game of games">
+    <div class="gameHead">
+      <div>
+        CATEGORY: <strong>{{ game.category }}</strong> <br />
+      </div>
+      <div>AGE Group : {{ game.age }}</div>
+    </div>
+
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <td>Game Name</td>
+          <td>Game Type</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let details of game.games">
+          <td>{{ details.gameName }}</td>
+          <td>{{ details.type }}</td>
+        </tr>
+      </tbody>
+    </table>
     <hr />
-    <p class="message">
-      Notice: All category games will be announced here very shortly
-    </p>
-    <button class="btn btn-primary" routerLink="/register">Register</button>
-  </h4>
+  </ng-container>
 </div>
