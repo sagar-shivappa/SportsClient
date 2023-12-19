@@ -6,7 +6,7 @@ export const cricketRules = [
   'Ground size will be 40 yards[Short Boundary], hitting outside the boundary will be considered as OUT',
   '1st over of each Innings will be a power play, where hitting sixes will be considered',
   'Minimum one girl player will be included in each Team (Based on Registrations) and one over should be given on mandatory basis',
-  'If a girl bowler bowls more than 6 wides in an over, captain can choose to changes the bowler with a penalty of extra 6 runs and the new bowler should continue from the same ball',
+  'If any bowler bowls more than 6 wides in an over, captain can choose to changes the bowler with a penalty of extra 6 runs and the new bowler should continue from the same ball',
   'Dress Code: Jersey type shirt and track pants, compulsory to wear sports shoes',
   'Bowling action should be one step',
   'On No Ball, the batting team will get a Free Hit chance. Hitting sixes will be allowed for that particalar ball',
