@@ -1,4 +1,4 @@
-<!-- <div class="container" *ngIf="!showConfirmation">
+<div class="container" *ngIf="!showConfirmation">
   <span><b>Notice:</b></span>
   <p class="message">
     1. Sports Registeration and Cricket can be done with the same form below.
@@ -8,7 +8,11 @@
     For Kids ( Below 13 years ) : Rs. 50
   </p>
   <hr />
-  <form action="submit" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+  <form
+    action="submit"
+    [formGroup]="registrationForm"
+    (ngSubmit)="registerPlayer()"
+  >
     <div class="form-group">
       <label for="fullName">Full Name</label> <span class="required">*</span>
       <input
@@ -245,6 +249,9 @@
         [disabled]="!registrationForm.valid"
       >
         Submit
+        <div class="loading" *ngIf="loader$ | async">
+          <span class="sr-only">Loading...</span>
+        </div>
       </button>
       <button class="btn btn-info" type="reset">Reset</button>
     </div>
@@ -253,13 +260,9 @@
 <app-register-confirm
   *ngIf="showConfirmation"
   [confirmation]="confirmationInfo"
-></app-register-confirm> -->
+></app-register-confirm>
 
-<!-- <a href="https://forms.gle/QQpoY17mFTAuJibW8" target="_blank">Click here</a>
-    <h6 class="message">
-      Note: This link will take you to a Google form, outside our website
-    </h6> -->
-<div class="container">
+<!-- <div class="container">
   Notice: <br />
   <p class="message">
     Date : 23rd & 24th December 2023 <br />
@@ -277,4 +280,4 @@
   marginheight="0"
   marginwidth="0"
   >Loading…</iframe
->
+> -->

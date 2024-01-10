@@ -5,7 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { Router } from '@angular/router';
+import { LoaderService } from 'src/app/services/loader.service';
 import { RegisterService } from 'src/app/services/register.service';
 
 @Component({
@@ -18,11 +18,12 @@ export class RegisterFormComponent implements OnInit {
   confirmationInfo: any;
   showConfirmation: boolean = false;
   paymentRequest!: google.payments.api.PaymentDataRequest;
+  loader$ = this.loader.loading$;
 
   constructor(
     private fb: FormBuilder,
     private registrationService: RegisterService,
-    private router: Router
+    private loader: LoaderService
   ) {
     this.registrationForm = this.fb.group({
       fullName: new FormControl('', [Validators.required]),
@@ -76,7 +77,7 @@ export class RegisterFormComponent implements OnInit {
     };
   }
 
-  onSubmit() {
+  registerPlayer() {
     console.log('submit', this.registrationForm.value);
     this.registrationService
       .register(this.registrationForm.value)
