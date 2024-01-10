@@ -5,7 +5,7 @@ import {
   HttpEvent,
   HttpInterceptor,
 } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import { Observable, finalize, map } from 'rxjs';
 import { LoaderService } from '../services/loader.service';
 
 @Injectable()
@@ -19,7 +19,7 @@ export class HttpInterceptorInterceptor implements HttpInterceptor {
     console.log('Intercept', request);
     this.loader.show();
     return next.handle(request).pipe(
-      map((event) => {
+      finalize(() => {
         console.log('res', event);
         this.loader.hide();
         return event;
