@@ -20,9 +20,7 @@ export class HttpInterceptorInterceptor implements HttpInterceptor {
     this.loader.show();
     return next.handle(request).pipe(
       finalize(() => {
-        console.log('res', event);
         this.loader.hide();
-        return event;
       })
     );
   }
