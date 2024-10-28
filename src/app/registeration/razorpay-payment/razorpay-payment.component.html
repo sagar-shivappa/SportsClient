@@ -1,0 +1,8 @@
+<div class="container">
+  <app-cricket-home></app-cricket-home>
+  <input type="checkbox" [(ngModel)]="tc" /> I Agree for all the above Terms &
+  Conditions <br />
+  <button [disabled]="!tc" (click)="pay()" class="btn btn-info">
+    Register Me
+  </button>
+</div>

@@ -4,7 +4,7 @@ import { CricketHomeComponent } from './cricket-home/cricket-home.component';
 import { CricketRoutingModule } from './cricket-routing.module';
 
 @NgModule({
-  declarations: [CricketHomeComponent],
+  declarations: [],
   imports: [CommonModule, CricketRoutingModule],
 })
 export class CricketModule {}
