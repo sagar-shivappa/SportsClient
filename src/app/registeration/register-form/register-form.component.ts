@@ -43,39 +43,7 @@ export class RegisterFormComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-    this.paymentRequest = {
-      apiVersion: 2,
-      apiVersionMinor: 0,
-      allowedPaymentMethods: [
-        {
-          type: 'CARD',
-          parameters: {
-            allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
-            allowedCardNetworks: ['MASTERCARD', 'VISA', 'AMEX'],
-          },
-          tokenizationSpecification: {
-            type: 'PAYMENT_GATEWAY',
-            parameters: {
-              gateway: 'example',
-              gatewayMerchantId: 'example',
-            },
-          },
-        },
-      ],
-      merchantInfo: {
-        merchantId: '0123456789',
-        merchantName: 'Demo Merchant',
-      },
-      transactionInfo: {
-        totalPriceStatus: 'FINAL',
-        totalPriceLabel: 'Total',
-        totalPrice: '100',
-        currencyCode: 'INR',
-        countryCode: 'IN',
-      },
-    };
-  }
+  ngOnInit() {}
 
   registerPlayer() {
     console.log('submit', this.registrationForm.value);

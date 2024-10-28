@@ -1,12 +1,13 @@
 <div class="container" *ngIf="!showConfirmation">
-  <span><b>Notice:</b></span>
-  <p class="message">
-    1. Sports Registeration and Cricket can be done with the same form below.
-    <br />
-    2. Registration Fee <br />
-    For Adults: Rs.100 + Rs.100 ( Only for Cricket Players ) <br />
-    For Kids ( Below 13 years ) : Rs. 50
-  </p>
+  <div class="notice">
+    <span><b>Notice:</b></span>
+    <p class="message">
+      1. Cricket Registration can we be done with the below form.
+      <br />
+      2. Player age should be above 13 years to participate in Cricket
+    </p>
+  </div>
+
   <hr />
   <form
     action="submit"
@@ -104,7 +105,7 @@
     </div>
     <hr />
 
-    <ng-container *ngIf="registrationForm.get('age')?.value > 12">
+    <!-- <ng-container *ngIf="registrationForm.get('age')?.value > 12">
       <p class="message">
         <a routerLink="/cricket">Click here for Cricket Rules</a>
       </p>
@@ -136,9 +137,9 @@
         </div>
       </div>
       <hr />
-    </ng-container>
+    </ng-container> -->
 
-    <ng-container *ngIf="registrationForm.get('cricket')?.value == 'Yes'">
+    <ng-container>
       <label for="cricketType">What do you consider yourself as?</label
       ><span class="required">*</span>
       <div id="cricketType" class="radio-selection">
