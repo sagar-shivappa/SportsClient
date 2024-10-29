@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 declare var Razorpay: any;
 @Component({
@@ -12,17 +13,15 @@ export class RazorpayPaymentComponent {
   constructor(private route: Router) {}
   pay() {
     const options = {
-      key: 'rzp_test_fFPfAbmashyfLE', // Replace with your Razorpay key ID
+      key: environment.api_key, // Replace with your Razorpay key ID
       amount: 100, // Amount in paise (e.g., ₹500.00)
       currency: 'INR',
       name: 'Devanga Sports Meet 2024',
       description: 'Registration Fee for Devanga Kredothsava 2024',
-      image: 'https://example.com/your_logo', // Optional
+      image: 'https://shorturl.at/Ab49a', // Optional
       handler: (response: any) => {
         // Handle successful payment here
         this.route.navigateByUrl('register/confirm');
-        console.log('Payment Successful', response);
-        // You can send this response to your server for verification if needed
       },
       prefill: {
         name: '',

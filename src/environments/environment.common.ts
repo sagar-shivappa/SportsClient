@@ -1,6 +1,7 @@
-export const environmentCommon = (config: any) => {
+export const environmentCommon = (config: any, api_key: any) => {
   return {
     is: 'dev',
+    api_key: `${api_key}`,
     api: {
       registerPlayer: `${config}/player/register`,
       findPlayer: `${config}/player`,
