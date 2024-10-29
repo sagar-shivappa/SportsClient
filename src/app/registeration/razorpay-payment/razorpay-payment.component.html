@@ -1,8 +1,48 @@
 <div class="container">
-  <app-cricket-home></app-cricket-home>
+  <h1>Welcome to Registration Desk <i class="fa-solid fa-desktop"></i></h1>
+  <br />
+  <hr />
+  <div class="gameType-options">
+    <label for="sportsSelection"
+      ><h2>How can I help you?<br /></h2>
+      <h3>ನಾನು ನಿಮಗೆ ಹೇಗೆ ಸಹಾಯ ಮಾಡಬಹುದು?</h3></label
+    ><span class="required">*</span>
+    <div id="sportsSelection" class="radio-selection">
+      <div>
+        <input
+          class="radio-in"
+          type="radio"
+          value="cricket"
+          [(ngModel)]="gameType"
+          id="flexCheckDefault"
+          name="cricket"
+        />
+        <label class="" for="flexCheckDefault">Cricket Registration </label>
+      </div>
+      <div>
+        <input
+          class="radio-in"
+          type="radio"
+          value="kids"
+          [(ngModel)]="gameType"
+          id="flexCheckChecked"
+          name="kids"
+        />
+        <label class="" for="flexCheckChecked"
+          >Kids Registration ( 5-12 years )
+        </label>
+      </div>
+    </div>
+  </div>
+  <br />
+  <hr />
+  <app-cricket-home *ngIf="gameType == 'cricket'"></app-cricket-home>
+  <app-kids-category *ngIf="gameType == 'kids'"></app-kids-category>
+  <hr />
   <input type="checkbox" [(ngModel)]="tc" /> I Agree for all the above Terms &
   Conditions <br />
-  <button [disabled]="!tc" (click)="pay()" class="btn btn-info">
+
+  <button [disabled]="!tc" (click)="pay()" class="btn btn-primary">
     Register Me
   </button>
 </div>
