@@ -38,11 +38,14 @@
   <hr />
   <app-cricket-home *ngIf="gameType == 'cricket'"></app-cricket-home>
   <app-kids-category *ngIf="gameType == 'kids'"></app-kids-category>
-  <hr />
-  <input type="checkbox" [(ngModel)]="tc" /> I Agree for all the above Terms &
-  Conditions <br />
 
-  <button [disabled]="!tc" (click)="pay()" class="btn btn-primary">
-    Register Me
-  </button>
+  <div *ngIf="gameType" class="termsCondition">
+    <hr />
+    <input type="checkbox" [(ngModel)]="tc" /> I Agree for all the above Terms &
+    Conditions <br />
+
+    <button [disabled]="!tc" (click)="pay()" class="btn btn-primary">
+      Register Me
+    </button>
+  </div>
 </div>

@@ -21,14 +21,14 @@ export const menu = [
   },
   {
     activity: 'Sponsors',
-    link: '/admin',
+    link: '/sponsors',
     logo: '../../assets/sponsors.png',
   },
-  {
-    activity: 'Admin Login',
-    link: '/admin',
-    logo: '../../assets/admin.png',
-  },
+  // {
+  //   activity: 'Admin Login',
+  //   link: '/admin',
+  //   logo: '../../assets/admin.png',
+  // },
 
   {
     activity: 'About Us',
