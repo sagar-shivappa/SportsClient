@@ -9,9 +9,13 @@ h1 h2 h3 h4 h5 {
 .logo {
   width: 40px;
   height: 100%;
+  border-radius: 50%;
 }
 .message {
   color: orangered;
+}
+.success{
+  color: rgb(43, 166, 43);
 }
 
 .field-error {

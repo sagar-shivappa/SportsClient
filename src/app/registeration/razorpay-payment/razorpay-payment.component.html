@@ -41,8 +41,8 @@
 
   <div *ngIf="gameType" class="termsCondition">
     <hr />
-    <input type="checkbox" [(ngModel)]="tc" /> I Agree for all the above Terms &
-    Conditions <br />
+    <input type="checkbox" [(ngModel)]="tc" /> I agree all the terms &
+    conditions <br />
 
     <button [disabled]="!tc" (click)="pay()" class="btn btn-primary">
       Register Me
