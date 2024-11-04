@@ -21,7 +21,7 @@ export class RazorpayPaymentComponent {
       currency: 'INR',
       name: 'Devanga Sports Meet 2024',
       description: 'Registration Fee for Devanga Kredothsava 2024',
-      image: 'https://shorturl.at/Ab49a', // Optional
+      image: 'https://feji.us/c0u4s9', // Optional
       handler: (response: any) => {
         // Handle successful payment here
         this.route.navigateByUrl('register/confirm');
