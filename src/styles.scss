@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+h1 h2 h3 h4 h5 {
+  //     font-family: 'Lato', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: rebeccapurple;
+}
+.logo {
+  width: 40px;
+  height: 100%;
+  border-radius: 50%;
+}
+.message {
+  color: orangered;
+}
+.success{
+  color: rgb(43, 166, 43);
+}
+
+.field-error {
+  color: white;
+  background-color: rgb(210, 19, 19);
+  border-radius: 0px 0px 5px 5px;
+  padding: 1%;
+  /* text-align: center; */
+}
+.thead-dark {
+  background-color: black;
+  color: white;
+  font-weight: 600;
+}
+.required {
+  color: red;
+  font-size: large;
+}
+.btn-primary {
+  background-color: #e7b144;
+  color: black;
+  border: none;
+  
+}
+.btn-primary:hover {
+  background-color: black;
+  color: #e7b144;;
+  border: none;
+}
+.youtube {
+  margin: 1%;
+  border-radius: 5px;
+}
+

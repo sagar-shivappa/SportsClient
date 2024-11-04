@@ -1,14 +1,23 @@
 .header {
-  background-color: cadetblue;
+  // background-color: cadetblue;
   padding: 5px;
   display: flex;
   height: 100%;
   width: 100%;
   justify-content: space-between;
+  letter-spacing: 5px;
   max-height: 50px;
+  align-items: center;
 }
 .menu-icon {
   float: left;
   padding: 3%;
   width: 20px;
+  font-size: xx-large;
+}
+
+.title {
+  font-weight: 700;
+  color: white;
+  text-align: center;
 }

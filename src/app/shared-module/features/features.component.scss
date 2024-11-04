@@ -1,0 +1,22 @@
+.card-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+  justify-content: center;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  margin: 30px;
+}
+.card p {
+  font-weight: 800;
+  margin: 10px;
+  text-align: center;
+  //   letter-spacing: 1px;
+}
+.image {
+  width: 100px;
+  height: 100px;
+}

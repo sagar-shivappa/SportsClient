@@ -1,1 +1,46 @@
-<p>cricket-home works!</p>
+<div class="container">
+  <div class="cricket_head">
+    <h3>Cricket Rules 2023</h3>
+    <i class="fa-solid fa-calendar-days message">
+      <strong>23</strong> <sup>rd</sup> December</i
+    >
+  </div>
+
+  <ol>
+    <li *ngFor="let rule of rules">
+      {{ rule }}
+      <br />
+    </li>
+  </ol>
+
+  <!-- <hr />
+  <button class="btn btn-primary" routerLink="/register">Register</button> -->
+  <!-- <hr />
+  <h3 style="text-align: center">DPL - <b>2023</b></h3>
+  <div class="cric-flex">
+    <div *ngFor="let team of cricketTeams">
+      <div class="cricket-container">
+        Team Name: <strong>{{ team.teamName }}</strong> <br />
+        Franchise Owner : <strong>{{ team.franchiseOwner }}</strong> <br />
+        Captain : {{ team.captain | uppercase }}
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <td>Player</td>
+              <td>Age</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let player of team.players">
+              <td>{{ player.name }}</td>
+              <td>{{ player.age }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <hr />
+      </div>
+    </div>
+  </div>
+</div> -->
+  <!-- <button routerLink="/register" class="btn btn-primary">Register Me</button> -->
+</div>
