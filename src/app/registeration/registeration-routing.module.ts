@@ -9,7 +9,7 @@ const routes: Routes = [
 
     children: [
       { path: '', component: RazorpayPaymentComponent },
-      { path: 'confirm', component: RegisterFormComponent },
+      { path: 'confirm/:gameType', component: RegisterFormComponent },
     ],
   },
 ];

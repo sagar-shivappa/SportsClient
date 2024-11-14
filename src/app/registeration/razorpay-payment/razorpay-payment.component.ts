@@ -24,7 +24,7 @@ export class RazorpayPaymentComponent {
       image: 'https://feji.us/c0u4s9', // Optional
       handler: (response: any) => {
         // Handle successful payment here
-        this.route.navigateByUrl('register/confirm');
+        this.route.navigateByUrl(`register/confirm/${this.gameType}`);
       },
       prefill: {
         name: '',
