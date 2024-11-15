@@ -14,7 +14,7 @@ export class RazorpayPaymentComponent {
   gameType: string = '';
   constructor(private route: Router) {}
   pay() {
-    const paymentAmount = this.gameType == 'cricket' ? '200' : '100';
+    const paymentAmount = this.gameType == 'cricket' ? '20000' : '10000';
     const options = {
       key: environment.api_key, // Replace with your Razorpay key ID
       amount: paymentAmount, // Amount in paise (e.g., ₹500.00)
