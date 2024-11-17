@@ -5,7 +5,7 @@ export const cricketRules = [
   'Overs follow, single player can bowl 2 OVERS maximum',
   'Ground size will be 40 yards[Short Boundary], hitting outside the boundary will be considered as OUT',
   '1st over of each Innings will be a power play, where hitting sixes will be considered',
-  'one over shall be given mandatorly for 40+ years players',
+  'one over shall be given mandatorly for 40+ years players & girl player. No ball is not considered for free hit. when girl player bowls',
   'If any bowler bowls more than 6 wides in an over, captain can choose to changes the bowler with a penalty of extra 6 runs and the new bowler should continue from the same ball',
   'Dress Code: Jersey type shirt and track pants, compulsory to wear sports shoes',
   'Bowling action should be one step',
