@@ -37,6 +37,11 @@ export class RazorpayPaymentComponent {
       theme: {
         color: 'black',
       },
+      method: {
+        netbanking: true, // Enable netbanking
+        card: true, // Enable cards
+        upi: false, // Disable UPI (Google Pay & PhonePe both will be disabled)
+      },
     };
 
     const rzp = new Razorpay(options);
