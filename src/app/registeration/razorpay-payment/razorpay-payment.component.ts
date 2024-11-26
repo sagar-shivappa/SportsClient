@@ -14,37 +14,41 @@ export class RazorpayPaymentComponent {
   gameType: string = '';
   constructor(private route: Router) {}
   pay() {
-    const paymentAmount = this.gameType == 'cricket' ? '20000' : '10000';
-    const options = {
-      key: environment.api_key, // Replace with your Razorpay key ID
-      amount: paymentAmount, // Amount in paise (e.g., ₹500.00)
-      currency: 'INR',
-      name: 'Devanga Sports Meet 2024',
-      description: 'Registration Fee for Devanga Kredothsava 2024',
-      image: 'https://devangasports.netlify.app/assets/logo1.png', // Optional
-      handler: (response: any) => {
-        // Handle successful payment here
-        this.route.navigateByUrl(`register/confirm/${this.gameType}`);
-      },
-      prefill: {
-        name: '',
-        email: '',
-        contact: '',
-      },
-      notes: {
-        address: 'some address',
-      },
-      theme: {
-        color: 'black',
-      },
-      // method: {
-      //   netbanking: true, // Enable netbanking
-      //   card: true, // Enable cards
-      //   upi: false, // Disable UPI (Google Pay & PhonePe both will be disabled)
-      // },
-    };
+    if (this.gameType == 'general') {
+      this.route.navigateByUrl(`register/confirm/${this.gameType}`);
+    } else {
+      const paymentAmount = this.gameType == 'cricket' ? '20000' : '10000';
+      const options = {
+        key: environment.api_key, // Replace with your Razorpay key ID
+        amount: paymentAmount, // Amount in paise (e.g., ₹500.00)
+        currency: 'INR',
+        name: 'Devanga Sports Meet 2024',
+        description: 'Registration Fee for Devanga Kredothsava 2024',
+        image: 'https://devangasports.netlify.app/assets/logo1.png', // Optional
+        handler: (response: any) => {
+          // Handle successful payment here
+          this.route.navigateByUrl(`register/confirm/${this.gameType}`);
+        },
+        prefill: {
+          name: '',
+          email: '',
+          contact: '',
+        },
+        notes: {
+          address: 'some address',
+        },
+        theme: {
+          color: 'black',
+        },
+        // method: {
+        //   netbanking: true, // Enable netbanking
+        //   card: true, // Enable cards
+        //   upi: false, // Disable UPI (Google Pay & PhonePe both will be disabled)
+        // },
+      };
 
-    const rzp = new Razorpay(options);
-    rzp.open();
+      const rzp = new Razorpay(options);
+      rzp.open();
+    }
   }
 }

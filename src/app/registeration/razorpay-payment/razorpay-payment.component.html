@@ -24,10 +24,10 @@
           type="radio"
           value="cricket"
           [(ngModel)]="gameType"
-          id="flexCheckDefault"
+          id="cricket"
           name="cricket"
         />
-        <label class="" for="flexCheckDefault"
+        <label class="" for="cricket"
           >Cricket Registration ( Registration Fee Rs.200)
         </label>
       </div>
@@ -37,11 +37,24 @@
           type="radio"
           value="kids"
           [(ngModel)]="gameType"
-          id="flexCheckChecked"
+          id="kids"
           name="kids"
         />
-        <label class="" for="flexCheckChecked"
+        <label class="" for="kids"
           >Kids Registration ( 5-12 years ) ( Registration Fee Rs.100)
+        </label>
+      </div>
+      <div>
+        <input
+          class="radio-in"
+          type="radio"
+          value="general"
+          [(ngModel)]="gameType"
+          id="general"
+          name="general"
+        />
+        <label class="" for="general"
+          >General Sports Registration 13+ years ( Registration Fee Rs.100)
         </label>
       </div>
     </div>
