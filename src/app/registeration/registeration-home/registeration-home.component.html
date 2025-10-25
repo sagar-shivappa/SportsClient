@@ -28,7 +28,7 @@
           name="cricket"
         />
         <label class="" for="cricket"
-          >Cricket Registration ( Registration Fee Rs.200)
+          >Cricket Registration ( 15-50 years)
         </label>
       </div>
       <div>
@@ -40,9 +40,7 @@
           id="kids"
           name="kids"
         />
-        <label class="" for="kids"
-          >Kids Registration ( 5-12 years ) ( Registration Fee Rs.100)
-        </label>
+        <label class="" for="kids">Kids Registration ( 5-15 years ) </label>
       </div>
       <div>
         <input
@@ -54,7 +52,7 @@
           name="general"
         />
         <label class="" for="general"
-          >General Sports Registration 13+ years ( Registration Fee Rs.100)
+          >General Sports Registration( 15+ years)
         </label>
       </div>
     </div>
@@ -69,7 +67,7 @@
     <input type="checkbox" [(ngModel)]="tc" /> I agree all the terms &
     conditions <br />
 
-    <button [disabled]="!tc" (click)="pay()" class="btn btn-primary">
+    <button [disabled]="!tc" (click)="register()" class="btn btn-primary">
       Register Me
     </button>
   </div>
