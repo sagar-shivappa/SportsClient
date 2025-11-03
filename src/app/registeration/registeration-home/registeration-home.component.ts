@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { event_information } from 'src/shared/configurations/event-info';
 import { environment } from 'src/environments/environment';
 
 declare var Razorpay: any;
@@ -12,6 +12,7 @@ declare var Razorpay: any;
 export class RegisterationHomeComponent {
   tc: boolean = false;
   gameType: string = '';
+  event = event_information;
   constructor(private route: Router) {}
   // pay() {
   //   if (this.gameType == 'general') {

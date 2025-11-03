@@ -6,22 +6,22 @@ export const categories = [
   },
   {
     category: 'CHILDREN',
-    age: '9-12 years',
+    age: '9-14 years',
     code: 'CHD',
   },
   {
     category: 'TEENS',
-    age: '13-19 years',
+    age: '15-28 years',
     code: 'TM /TF',
   },
   {
     category: 'YOUNGSTERS',
-    age: '20-35 years',
+    age: '29-40 years',
     code: 'YM /YF',
   },
   {
     category: 'WARRIORS',
-    age: '36-59 years',
+    age: '41-60 years',
     code: 'WM /WF',
   },
   {

@@ -1,22 +1,24 @@
 <div class="container body">
   <h1 class="devanga">
-    ದೇವಾಂಗ ಕ್ರೀಡೋತ್ಸವ<br />
-    <p style="text-align: center"><strong>2025</strong></p>
+    {{ event.name_kannada }}<br />
+    <p style="text-align: center">
+      <strong>{{ event.year }}</strong>
+    </p>
   </h1>
   <h4>
     <div>
       <img src="../../assets/calender.png" class="logo" alt="" href="" />
-      22nd December
+      {{ event.date }}, {{ event.time }}
     </div>
     <div>
       <img src="../../assets/location.png" class="logo" alt="" />
-      <a href="#location">Railway Sports Ground, Mysuru</a>
+      <a href="#location">{{ event.location }}</a>
     </div>
   </h4>
   <app-features></app-features>
   <hr />
   <section id="youtube">
-    <h3>Registrations have started</h3>
+    <h3>We are Back again !! {{ event.year }}</h3>
     <iframe
       width="100%"
       height="300px"

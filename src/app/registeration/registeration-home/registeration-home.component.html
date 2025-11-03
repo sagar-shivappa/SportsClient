@@ -3,12 +3,14 @@
   <div>
     Any problems while Registering <br />
 
-    <p>Contact : <a>9380786390</a> (Pruthvi M R)</p>
+    <p>
+      Contact : <a>{{ event.contact_person_number }}</a> ({{
+        event.contact_person_name
+      }})
+    </p>
     <p>
       Email :
-      <a href="mailto:devangasportsmeet@gmail.com"
-        >devangasportsmeet@gmail.com</a
-      >
+      <a href="`mailto:${devangasportsmeet@gmail.com}`">{{ event.email }}</a>
     </p>
   </div>
   <br />
@@ -28,9 +30,10 @@
           name="cricket"
         />
         <label class="" for="cricket"
-          >Cricket Registration ( 15-50 years)
+          >Cricket Registration ( 16-50 years)
         </label>
       </div>
+      <hr />
       <div>
         <input
           class="radio-in"
@@ -42,6 +45,7 @@
         />
         <label class="" for="kids">Kids Registration ( 5-15 years ) </label>
       </div>
+
       <div>
         <input
           class="radio-in"
