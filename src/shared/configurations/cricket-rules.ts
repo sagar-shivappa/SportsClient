@@ -1,6 +1,6 @@
 export const cricketRules = [
   'Teams will be formed by the event organisers',
-  'Players AGE should be above 13 years',
+  'Players AGE should be above 16 years',
   'Each side will get 5 overs to play',
   'Overs follow, single player can bowl 1 OVER maximum',
   'Ground size will be 40 yards[Short Boundary], hitting outside the boundary will be considered as OUT',
@@ -10,7 +10,7 @@ export const cricketRules = [
   'If any male bowler bowls more than 6 wides in an over, captain can choose to changes the bowler with a penalty of extra 6 runs and the new bowler should continue from the same ball',
   'Dress Code: Jersey type shirt and track pants, compulsory to wear sports shoes',
   'Bowling action should be one step, within the crease box',
-  'On No Ball, the batting team will get a Free Hit chance. Hitting sixes will be allowed for that particalar ball',
+  'On No Ball, the batting team will get a Free Hit chance. Hitting sixes will be allowed for that particular ball',
   'If Team players are not available at the match time, the team should continue to play with the remaining players',
   'Net Run Rate will be calculated by the Umpires for the each game',
   'Umpire descisions will be FINAL',
