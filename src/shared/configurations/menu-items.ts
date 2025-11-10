@@ -9,11 +9,11 @@ export const menu = [
   //   link: '/games',
   //   logo: '../../assets/games.png',
   // },
-  // {
-  //   activity: 'Categories',
-  //   link: '/categories',
-  //   logo: '../../assets/categories.png',
-  // },
+  {
+    activity: 'Categories',
+    link: '/categories',
+    logo: '../../assets/categories.png',
+  },
   {
     activity: 'Cricket',
     link: '/cricket',

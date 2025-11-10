@@ -3,12 +3,19 @@
   <div>
     Any problems while Registering <br />
 
-    <p>Contact : <a>9380786390</a> (Pruthvi M R)</p>
+    <p>
+      Contact : <a>{{ event.contact_person_number }}</a> ({{
+        event.contact_person_name
+      }})
+    </p>
+    <p>
+      Another Contact : <a>{{ event.Another_contact_person_number }}</a> ({{
+        event.Another_contact_person_name
+      }})
+    </p>
     <p>
       Email :
-      <a href="mailto:devangasportsmeet@gmail.com"
-        >devangasportsmeet@gmail.com</a
-      >
+      <a href="`mailto:${devangasportsmeet@gmail.com}`">{{ event.email }}</a>
     </p>
   </div>
   <br />
@@ -18,7 +25,7 @@
       ><h2>How can I help you?<br /></h2> </label
     ><span class="required">*</span>
     <div id="sportsSelection" class="radio-selection">
-      <!-- <div>
+      <div>
         <input
           class="radio-in"
           type="radio"
@@ -28,9 +35,10 @@
           name="cricket"
         />
         <label class="" for="cricket"
-          >Cricket Registration ( Registration Fee Rs.200)
+          >Cricket Registration ( 16-50 years)
         </label>
-      </div> -->
+      </div>
+      <hr />
       <div>
         <input
           class="radio-in"
@@ -40,10 +48,9 @@
           id="kids"
           name="kids"
         />
-        <label class="" for="kids"
-          >Kids Registration ( 5-12 years ) ( Registration Fee Rs.100)
-        </label>
+        <label class="" for="kids">Kids Registration ( 5-15 years ) </label>
       </div>
+
       <div>
         <input
           class="radio-in"
@@ -54,7 +61,7 @@
           name="general"
         />
         <label class="" for="general"
-          >General Sports Registration 13+ years ( Registration Fee Rs.100)
+          >General Sports Registration( 15+ years)
         </label>
       </div>
     </div>
@@ -69,7 +76,7 @@
     <input type="checkbox" [(ngModel)]="tc" /> I agree all the terms &
     conditions <br />
 
-    <button [disabled]="!tc" (click)="pay()" class="btn btn-primary">
+    <button [disabled]="!tc" (click)="register()" class="btn btn-primary">
       Register Me
     </button>
   </div>

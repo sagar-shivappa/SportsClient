@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { RegisterFormComponent } from './register-form/register-form.component';
-import { RazorpayPaymentComponent } from './razorpay-payment/razorpay-payment.component';
+import { RegisterFormComponent } from './register-forms/register-form.component';
+import { RegisterationHomeComponent } from './registeration-home/registeration-home.component';
 
 const routes: Routes = [
   {
     path: '',
 
     children: [
-      { path: '', component: RazorpayPaymentComponent },
-      { path: 'confirm/:gameType', component: RegisterFormComponent },
+      { path: '', component: RegisterationHomeComponent },
+      { path: ':gameType', component: RegisterFormComponent },
     ],
   },
 ];
