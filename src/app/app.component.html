@@ -14,6 +14,8 @@
     routerLink=""
   />
 </div>
+<!--that closes menu when clicked -->
+<div class="overlay" *ngIf="menuOpen" (click)="closeMenu()"></div>
 
 <app-side-menu *ngIf="menuOpen" (closeMenu)="menuAction()"></app-side-menu>
 
