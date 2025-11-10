@@ -8,4 +8,7 @@ export const event_information = {
   email: 'devangasportsmeet@gmail.com',
   contact_person_name: 'Likith S',
   contact_person_number: '8310083352',
+  Another_contact_person_name: 'Suhas M R',
+  Another_contact_person_number: '7349298858',
+
 };
