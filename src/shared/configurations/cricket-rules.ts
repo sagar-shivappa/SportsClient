@@ -1,6 +1,6 @@
 export const cricketRules = [
   
-'Players AGE should be 15 to 55 years (born before Jan 1st 2010)',
+'Players AGE should be 15 to 50 years (born before Jan 1st 2010)',
 'Each side will get 5 overs to play (5 overs per inninings)',
 'Overs follow, single player can bowl 1 OVER maximum',
 'Ground size will be 65mtrs [Full Boundary]',
