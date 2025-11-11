@@ -3,7 +3,7 @@ export const event_information = {
   name_kannada: 'ದೇವಾಂಗ ಕ್ರೀಡೋತ್ಸವ',
   date: '21st December',
   year: '2025',
-  location: 'St. Philominas ground, Bannimantap',
+  location: "St. Philomena's ground, Bannimantap",
   time: '7 am',
   email: 'devangasportsmeet@gmail.com',
   contact_person_name: 'Likith S',
